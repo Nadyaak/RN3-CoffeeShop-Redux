@@ -1,4 +1,4 @@
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation";
 
 // Component
 import CoffeeList from "../Components/CoffeeList";
@@ -10,11 +10,10 @@ const MyStack = createStackNavigator(
   {
     List: CoffeeList,
     Detail: CoffeeDetail,
-    Cart: CoffeeCart,
-    Login: Login
+    Cart: CoffeeCart
   },
   {
-    initialRouteName: "Login",
+    initialRouteName: "List",
     cardStyle: {
       backgroundColor: "rgb(20, 90, 100)"
     },
@@ -29,6 +28,6 @@ const MyStack = createStackNavigator(
     }
   }
 );
-const AppContainer = createAppContainer(MyStack);
+//const AppContainer = createAppContainer(MyStack);
 
-export default AppContainer;
+export default MyStack;
